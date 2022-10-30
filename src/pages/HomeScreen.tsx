@@ -1,5 +1,6 @@
 import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from "@ionic/react";
 import TopBar from "../components/TopBar";
+import moment from 'moment'
 
 const HomeScreen: React.FC  = () => {
     return (
@@ -8,12 +9,14 @@ const HomeScreen: React.FC  = () => {
             <TopBar title='Home'/>
             <IonCard>
                 <IonCardHeader>
-                    <IonCardTitle>Card Title</IonCardTitle>
-                    <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+                    <IonCardTitle>Story</IonCardTitle>
+                    <IonCardSubtitle>
+                        {moment().format('MMMM Do YYYY, h:mm:ss a')}
+                    </IonCardSubtitle>
                 </IonCardHeader>
 
                 <IonCardContent>
-                    Here's a small text description for the card content. Nothing more, nothing less.
+                    This is a post in a card
                 </IonCardContent>
             </IonCard>
         </>
