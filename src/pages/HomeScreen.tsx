@@ -4,7 +4,6 @@ import moment from 'moment'
 
 const HomeScreen: React.FC  = () => {
     return (
-        //@ts-ignore
         <>
             <TopBar title='Home'/>
             <IonCard>
