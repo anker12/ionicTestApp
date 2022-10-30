@@ -1,5 +1,4 @@
 import { IonButtons, IonHeader, IonMenuButton, IonTitle, IonToolbar } from '@ionic/react';
-import { useParams } from 'react-router';
 
 type TopBarProps = {
     title: string,
