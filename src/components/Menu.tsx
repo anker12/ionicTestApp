@@ -15,10 +15,10 @@ import { homeOutline, homeSharp, personOutline } from 'ionicons/icons';
 import './styles/Menu.css';
 
 interface AppPage {
-  url: string;
-  iosIcon: string;
-  mdIcon: string;
-  title: string;
+    url: string;
+    iosIcon: string;
+    mdIcon: string;
+    title: string;
 }
 
 const appPages: AppPage[] = [
