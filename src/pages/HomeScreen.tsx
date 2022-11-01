@@ -8,7 +8,7 @@ const HomeScreen: React.FC  = () => {
             <TopBar title='Home'/>
             <IonCard>
                 <IonCardHeader>
-                    <IonCardTitle>Story</IonCardTitle>
+                    <IonCardTitle>Storyy</IonCardTitle>
                     <IonCardSubtitle>
                         {moment().format('MMMM Do YYYY, h:mm:ss a')}
                     </IonCardSubtitle>

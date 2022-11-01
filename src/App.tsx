@@ -22,6 +22,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import HomeScreen from './pages/HomeScreen';
+import TopBar from './components/TopBar';
 
 setupIonicReact();
 
@@ -33,10 +34,13 @@ const App: React.FC = () => {
 		  <Menu />
 		  <IonRouterOutlet id="main">
 			<Route path="/" exact={true}>
-			  <Redirect to="/page/Inbox" />
+			  <Redirect to="/home" />
 			</Route>
 			<Route path='/home'>
 				<HomeScreen />
+			</Route>
+			<Route path='/about'>
+				<TopBar title='About' />
 			</Route>
 		  </IonRouterOutlet>
 		</IonSplitPane>

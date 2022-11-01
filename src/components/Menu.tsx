@@ -11,7 +11,7 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { mailOutline, mailSharp, personOutline } from 'ionicons/icons';
+import { homeOutline, homeSharp, personOutline } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -25,12 +25,12 @@ const appPages: AppPage[] = [
 	{
 		title: 'Home',
 		url: '/home',
-		iosIcon: mailOutline,
-		mdIcon: mailSharp,
+		iosIcon: homeOutline,
+		mdIcon: homeSharp,
 	},
 	{
 		title: 'About',
-		url: '/page/about',
+		url: '/about',
 		iosIcon: personOutline,
 		mdIcon: personOutline,
 	},
@@ -43,8 +43,8 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>Inbox</IonListHeader>
-          <IonNote>hi@ionicframework.com</IonNote>
+          <IonListHeader>Ionic Test App</IonListHeader>
+          <IonNote></IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
