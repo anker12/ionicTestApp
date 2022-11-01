@@ -3,15 +3,17 @@ import { useState } from 'react';
 
 type TopBarProps = {
     title: string,
+    slot?: string | null,
 }
 
 const TopBar: React.FC<TopBarProps> = ({
-    title
+    title,
+    slot,
 }) => {
     const [loggedIn, setLoggedIn] = useState(false);
 
     return (
-        <IonHeader>
+        <IonHeader slot={slot ?? ''}>
             <IonToolbar>
                 <IonButtons slot="start">
                     <IonMenuButton />
