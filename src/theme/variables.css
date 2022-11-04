@@ -234,3 +234,8 @@ http://ionicframework.com/docs/theming/ */
     --ion-card-background: #1e1e1e;
   }
 }
+
+.split-pane-visible >.split-pane-side {
+  min-width: 250px!important;
+  max-width: 250px!important;
+}
