@@ -1,88 +1,48 @@
 import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonPage } from "@ionic/react";
 import TopBar from "../components/TopBar";
-import moment from 'moment'
+import Card from "../components/Card";
 
 const HomeScreen: React.FC  = () => {
     return (
-        <>
-            <IonPage>
-                <TopBar title='Home' slot='fixed'/>
-                <IonContent>
-                    <IonCard >
-                        <IonCardHeader>
-                            <IonCardTitle>Storyy</IonCardTitle>
-                            <IonCardSubtitle>
-                                {moment().format('MMMM Do YYYY, h:mm:ss a')}
-                            </IonCardSubtitle>
-                        </IonCardHeader>
-
-                        <IonCardContent>
-                            This is a post in a card
-                        </IonCardContent>
-                    </IonCard>
-                    <IonCard>
-                        <IonCardHeader>
-                            <IonCardTitle>Storyy</IonCardTitle>
-                            <IonCardSubtitle>
-                                {moment().format('MMMM Do YYYY, h:mm:ss a')}
-                            </IonCardSubtitle>
-                        </IonCardHeader>
-
-                        <IonCardContent>
-                            This is a post in a card
-                        </IonCardContent>
-                    </IonCard>
-                    <IonCard>
-                        <IonCardHeader>
-                            <IonCardTitle>Storyy</IonCardTitle>
-                            <IonCardSubtitle>
-                                {moment().format('MMMM Do YYYY, h:mm:ss a')}
-                            </IonCardSubtitle>
-                        </IonCardHeader>
-
-                        <IonCardContent>
-                            This is a post in a card
-                        </IonCardContent>
-                    </IonCard>
-                    <IonCard>
-                        <IonCardHeader>
-                            <IonCardTitle>Storyy</IonCardTitle>
-                            <IonCardSubtitle>
-                                {moment().format('MMMM Do YYYY, h:mm:ss a')}
-                            </IonCardSubtitle>
-                        </IonCardHeader>
-
-                        <IonCardContent>
-                            This is a post in a card
-                        </IonCardContent>
-                    </IonCard>
-                    <IonCard>
-                        <IonCardHeader>
-                            <IonCardTitle>Storyy</IonCardTitle>
-                            <IonCardSubtitle>
-                                {moment().format('MMMM Do YYYY, h:mm:ss a')}
-                            </IonCardSubtitle>
-                        </IonCardHeader>
-
-                        <IonCardContent>
-                            This is a post in a card
-                        </IonCardContent>
-                    </IonCard>
-                    <IonCard>
-                        <IonCardHeader>
-                            <IonCardTitle>Storyy</IonCardTitle>
-                            <IonCardSubtitle>
-                                {moment().format('MMMM Do YYYY, h:mm:ss a')}
-                            </IonCardSubtitle>
-                        </IonCardHeader>
-
-                        <IonCardContent>
-                            This is a post in a card
-                        </IonCardContent>
-                    </IonCard>
-                </IonContent>
-            </IonPage>
-        </>
+        <IonPage>
+            <TopBar title='Home' slot='fixed'/>
+            <IonContent>
+                <Card
+                    title="First card?" 
+                    content={
+                        'Gaming B)'
+                    }
+                />
+                <Card
+                    title="Second card?" 
+                    content={
+                        (<div>
+                            <span>Heyo</span>
+                        </div>)
+                    }
+                />
+                <Card
+                    title="Third card?" 
+                    content={
+                        'Gaming B)'
+                    }
+                />
+                <Card
+                    title="Fourth card?"
+                    subtitle={'Nested cards'} 
+                    content={(
+                        <>
+                            <Card 
+                                content={'Nested card 1'}
+                            />
+                            <Card 
+                                content={'Nested card 2'}
+                            />
+                        </>
+                    )}
+                />
+            </IonContent>
+        </IonPage>
     );
 }
 
