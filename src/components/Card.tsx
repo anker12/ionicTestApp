@@ -1,5 +1,6 @@
 import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from "@ionic/react"
 import moment from "moment"
+import styles from './styles/Card.module.css';
 
 
 type CardProps = {
@@ -14,7 +15,7 @@ const Card = ({
     subtitle,
 }: CardProps) => {
     return (
-        <IonCard >
+        <IonCard color='secondary'>
             <IonCardHeader>
                 <IonCardTitle>{title ? title : 'Storyy'}</IonCardTitle>
                 <IonCardSubtitle>
